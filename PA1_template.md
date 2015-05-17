@@ -220,7 +220,7 @@ mdata<-melt(data5, id=c("date", "interval", "day"))
 castdata<-dcast(mdata, day + interval~variable, mean)
 
 
-xyplot(castdata$steps ~ castdata$interval | castdata$day, layout=c(1,2), xlab="interval", ylab="steps", main="Mean number of steps taken \n in weekdays and weekends by interval" )
+xyplot(castdata$steps ~ castdata$interval | castdata$day, layout=c(1,2), xlab="interval", ylab="steps", type="b",  main="Mean number of steps taken \n in weekdays and weekends by interval" )
 ```
 
 ![plot of chunk 5.2](figure/5.2-1.png) 
